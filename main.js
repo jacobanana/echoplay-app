@@ -1,7 +1,9 @@
 const path = require('path')
-global.appRoot = path.resolve(__dirname)
 
-const server = require('echoplay-server')
+var {EchoPlayServer} = require('echoplay-server')
+var server = new EchoPlayServer(path.resolve(__dirname))
+server.start()
+
 const electron = require('electron')
 const url = require('url')
 
