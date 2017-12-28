@@ -1,8 +1,8 @@
 const path = require('path')
 
 var {EchoPlayServer} = require('echoplay-server')
-var server = new EchoPlayServer(path.resolve(__dirname))
-server.start()
+const PORT = process.env.PORT
+var server = new EchoPlayServer(path.resolve(__dirname), PORT)
 
 const electron = require('electron')
 const url = require('url')
@@ -29,14 +29,14 @@ function createWindow () {
     transparent: true
   })
 
-  // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
-    pathname: 'localhost:3000',
+  const APP_URL = url.format({
+    pathname: 'localhost:'+PORT,
     protocol: 'http:',
     slashes: true
-  }))
+  })
 
-  //mainWindow.maximize()
+  mainWindow.loadURL(APP_URL)
+  console.log(APP_URL)
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

@@ -11,7 +11,6 @@
   "author": "Adrien Fauconnet",
   "license": "ISC",
   "dependencies": {
-    "bonjour": "^3.5.0",
     "echoplay-server": "file:server"
   },
   "devDependencies": {
