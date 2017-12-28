@@ -1,7 +1,7 @@
 const path = require('path')
 
 var {EchoPlayServer} = require('echoplay-server')
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 var server = new EchoPlayServer(path.resolve(__dirname), PORT)
 
 const electron = require('electron')
