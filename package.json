@@ -1,6 +1,6 @@
 {
   "name": "echoplay-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "EchoPlay - learn and play music together",
   "main": "main.js",
   "scripts": {
